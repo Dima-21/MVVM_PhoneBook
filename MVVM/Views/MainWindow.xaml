@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVM"
         mc:Ignorable="d"
-        Title="PhoneBook" Height="400" Width="525">
+        Title="PhoneBook" Height="650" Width="525">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal">
+            <Image Source="/Images/phone.ico" Width="60" Margin="5"/>
+            <TextBlock Text="PhoneBook" Style="{StaticResource baseFont}" FontSize="50" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15 5"/>
+        </StackPanel>
+        <Line Stroke="Blue" X1="5" Y1="0" X2="460" Y2="0" Margin="0 5 0 20"
+              StrokeThickness="2" StrokeDashCap="Round" StrokeDashArray="4 2"></Line>
         <GroupBox Header="Список контактов">
             <ListView x:Name="List1" ItemsSource="{Binding Path=Contacts}"
                       SelectedItem="{Binding Path=SelectedContact}">
